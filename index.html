@@ -1,0 +1,382 @@
+<!DOCTYPE html> <!--Para indicar la version de html a usar-->
+<html lang="es">
+<head>
+    <!--metadatos-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--para que el tamaño del navegador se ajuste al tamaño del dispositivo -->
+    <meta name="author" content="Hidalgo Eustaquio">
+    <meta name="description" content="Portafolio de desarrollo web de Hidalgo Eustaquio">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <!--título-->
+    <title>Hidalgo Eustaquio | Desarrollo frontend | Desarrollo Web Front-End</title>
+    <!--Favicon: ícono de la pestaña-->
+    <link rel="icon" type="image/x-icon" href="images/icono.svg">
+    <!---link de bootstrap: el de CSS se pega en head, y el de JS se recomiendo pegar antes de cerrar el body -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!--añadimos nuestro CSS--> <!--stylesheet: hoja de estilo-->
+    <link href="style.css" rel="stylesheet"> 
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Barra de navegación: getbootstrap, docs, componentes, navbar, toggler-->
+    <nav class="navbar navbar-expand-md navbar-light"> <!--md: para que se expanda desde dispositivos medianos-->
+        <div class="container-fluid"> <!--para que se ajuste al 100% del ancho-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-toggler">
+            <a class="navbar-brand" href="#"> <img src="images/icono.svg" width="50" alt="logo de la página web"> </a>
+            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mí</a> <!--lo relacionamos con id-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonios">Testimonios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!--Sección Hero: Seccion principal; dede contener cosas importantes-->
+    <section class="hero aling-items-stretch">
+        <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+            <img class="foto_perfil" src="images/foto_perfil.jpg" alt="Foto de Hidalgo Eustaquio"> <!--alt: para dar descripción-->
+            <h1>Hola, soy Hidalgo Eustaquio</h1>
+            <h2>Desarrollo sitios web y escríbo artículos sobre programacíon</h2>
+        </div>
+        <div class="hero-inferior">
+          <img class="hero-inferior-imagen img-fluid" src="images/hero-inferior.svg" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React"> <!--img-fluid: clase de bootstrap, para que la img se adapte al ancho del navegador-->
+        </div>
+    </section>
+
+    <!--Sobre mí-->
+
+    <section id="sobre-mi" class="sobre-mi seccion-oscura">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Conoce a Hidalgo Eustaquio</h2>
+        <p class="seccion-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia consequatur vitae iusto ut cumque, enim corporis dignissimos modi quo incidunt expedita magni maxime veritatis, saepe deleniti tempore, sunt autem soluta minima sit atque minus doloribus! Doloremque illo tempora quidem eaque dignissimos adipisci, neque fuga impedit temporibus</p> <!--texto de parrafo-->
+      </div>
+    </section>
+
+    <!--Experiencia-->
+
+    <section class="experiencia seccion-clara">
+      <div class="container text-center"> <!--clases de bootstrap-->
+        <div class="row"> <!--clase de bootstrap-->
+          <!--desarrollo web-->
+          <div class="columna col-12 col-md-4"> <!-- para dispositivos pequeños, hasta llegar a md (768px), cada elemento ocupa 12 comulnas, en grandes cada elemendo ocupa 4 columnas-->
+            <i class="bi bi-laptop"></i> <!-- copiado del icono de bootstrap-->
+            <p class="experiencia-titulo">Desarrollo web</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, molestias, reiciendis, possimus quasi distinctio fugit alias explicabo tenetur nobis provident architecto non nihil est beatae eaque doloribus dolorem modi ipsum!</p>
+            <div class="badges-contenedor"> 
+              <span class="badge text-bg-primary">HTML</span> <!--badge (insignia): getbootstrap, docs,componente, badge,Background colors, copiamos el codigo de primary  -->
+              <span class="badge text-bg-primary">CSS</span> <!--badge: hace que aparescan textos como resaltados-->
+              <span class="badge text-bg-primary">JavaScript</span>
+              <span class="badge text-bg-primary">React</span>
+            </div>
+          </div>
+          <!--articulos-->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i> <!-- copiado del icono de bootstrap-->
+            <p class="experiencia-titulo">Artículos</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, molestias, reiciendis, possimus quasi distinctio fugit alias explicabo tenetur nobis provident architecto non nihil est beatae eaque doloribus dolorem modi ipsum!</p>
+            <div class="badges-contenedor"> 
+              <span class="badge text-bg-primary">Blogs</span> <!--badge (insignia): getbootstrap, docs,componente, badge,Background colors, copiamos el codigo de primary  -->
+              <span class="badge text-bg-primary">Editar</span> <!--badge: hace que aparescan textos como resaltados-->
+              <span class="badge text-bg-primary">Escribir</span>
+            </div>
+          </div>
+          <!--estudiante-->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i> <!-- copiado del icono de bootstrap-->
+            <p class="experiencia-titulo">Estudiante</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, molestias, reiciendis, possimus quasi distinctio fugit alias explicabo tenetur nobis provident architecto non nihil est beatae eaque doloribus dolorem modi ipsum!</p>
+            <div class="badges-contenedor"> 
+              <span class="badge text-bg-primary">Python</span> <!--badge (insignia): getbootstrap, docs,componente, badge,Background colors, copiamos el codigo de primary  -->
+              <span class="badge text-bg-primary">Desarrollo web</span> <!--badge: hace que aparescan textos como resaltados-->
+              <span class="badge text-bg-primary">freeCodeCamp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Proyectos-->
+    
+    <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+      <h2 class="seccion-titulo texto-negro">Mis proyectos recientes</h2>
+      <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente</h3>
+      <!--Galeria de proyectos-->
+      <div class="container text-center proyectos-contenedor">
+        <div class="row">
+          <!--proyecto 1-->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="images/proyecto1.png" alt="Proyecto 1">
+              <div class="overlay"> <!--overlay:cubrir, para que aparesca encima de la imagen, no es una clase de bootstrap-->
+                <p>Proyecto 1</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-github"></i> <!--icono de bootstrap-->
+                  </a>
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-laptop"></i> <!--icono de bootstrap-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--proyecto 2-->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="images/proyecto2.png" alt="Proyecto 1">
+              <div class="overlay"> <!--overlay:cubrir, para que aparesca encima de la imagen, no es una clase de bootstrap-->
+                <p>Proyecto 2</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-github"></i> <!--icono de bootstrap-->
+                  </a>
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-laptop"></i> <!--icono de bootstrap-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--proyecto 3-->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="images/proyecto3.png" alt="Proyecto 1">
+              <div class="overlay"> <!--overlay:cubrir, para que aparesca encima de la imagen, no es una clase de bootstrap-->
+                <p>Proyecto 3</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-github"></i> <!--icono de bootstrap-->
+                  </a>
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-laptop"></i> <!--icono de bootstrap-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--proyecto 4-->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="images/proyecto4.png" alt="Proyecto 1">
+              <div class="overlay"> <!--overlay:cubrir, para que aparesca encima de la imagen, no es una clase de bootstrap-->
+                <p>Proyecto 4</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-github"></i> <!--icono de bootstrap-->
+                  </a>
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-laptop"></i> <!--icono de bootstrap-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--proyecto 5-->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="images/proyecto5.png" alt="Proyecto 1">
+              <div class="overlay"> <!--overlay:cubrir, para que aparesca encima de la imagen, no es una clase de bootstrap-->
+                <p>Proyecto 5</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-github"></i> <!--icono de bootstrap-->
+                  </a>
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-laptop"></i> <!--icono de bootstrap-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--proyecto 6-->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="images/proyecto6.png" alt="Proyecto 1">
+              <div class="overlay"> <!--overlay:cubrir, para que aparesca encima de la imagen, no es una clase de bootstrap-->
+                <p>Proyecto 6</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-github"></i> <!--icono de bootstrap-->
+                  </a>
+                  <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer"> <!--rel="noopener noreferrer": para no tener problemas de bulnerabilidad al momento de abrir una pestaña nueva-->
+                    <i class="bi bi-laptop"></i> <!--icono de bootstrap-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn-info"> <!--boton de mas informacion de bootstrap: documentacion de bootstrap, components, button, de examples copiamos info -->
+          Ver más proyectos
+          <i class="bi bi-arrow-right-circle-fill"></i> <!--icono de bootstrap-->
+        </button> 
+      </a>
+    </section>
+
+    <!--articulos-->
+
+    <section class="articulos justify-content-center">
+      <h2 class="seccion-titulo texto-negro">Artículos</h2> 
+      <div class="card"> <!--en documentacion de getbootstrap, components, card,list groups, copiamos el código de la seccion de features. solo se personalizó la clase de esta fila  -->
+        <div class="card-header">
+          Más recientes 
+        </div>
+        <ul class="list-group list-group-flush">
+          <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">Importancia de python en inteligencia artificial</li>
+          </a>
+          <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">Ciclo while en python</li>
+          </a>
+          <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">¿Qué son las librerias en python?</li>
+          </a>
+          <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">Importancia de las reder neuronales</li>
+          </a>
+          <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">Número binarios y hexadecimales</li>
+          </a>
+          <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+            <li class="list-group-item">Importancia de Data Science en el mundo actual</li>
+          </a>
+        </ul>
+      </div> <!--hasta aca es el codigo de bootstrap-->
+      <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn-info"> <!--boton de mas informacion de bootstrap: documentacion de bootstrap, components, button, de examples copiamos info -->
+          Ver más artículos
+          <i class="bi bi-arrow-right-circle-fill"></i> <!--icono de bootstrap-->
+        </button> 
+      </a>
+    </section>
+
+    <!--testimonios-->
+
+    <section id="testimonios" class="testimonios seccion-clara">
+      <h2 class="seccion-titulo">Testimonio</h2>
+      <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes...</h3>
+      
+      <!--carrusel, algo como slyders-->
+      <!--tomamos base de la documentacion de bootstrap: componentes, carousel, whith controls-->
+      <div id="testimonios-carrusel" class="carousel carrusel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner"> <!--inner: parte interna del carrusel-->
+          <div class="carousel-item active"> <!--active: es lo que se muestra primero-->
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="images/cliente1.svg" alt="Foto de cliente Luis">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. In temporibus soluta natus nobis sit. Earum modi, assumenda repellat voluptas reiciendis ipsum iusto ducimus, aliquam</p>
+              <div class="testimonio-info">
+                <p class="cliente">Luis</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="images/cliente2.svg" alt="Foto de cliente Carlos">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. In temporibus soluta natus nobis sit. Earum modi, assumenda repellat voluptas reiciendis ipsum iusto ducimus, aliquam</p>
+              <div class="testimonio-info">
+                <p class="cliente">Karolyn</p>
+                <p class="cargo">Gerente de investigación en DesarrolloWeb</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="images/cliente3.svg" alt="Foto de cliente Luis">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. In temporibus soluta natus nobis sit. Earum modi, assumenda repellat voluptas reiciendis ipsum iusto ducimus, aliquam</p>
+              <div class="testimonio-info">
+                <p class="cliente">Carlos</p>
+                <p class="cargo">Gerente de DiseñaMiPáginaWeb</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button style="column-count: black;" class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!--Contacto-->
+
+    <section id="contacto" class="contacto seccion-oscura">
+      <div class="container">
+        <div class="container text-center rectangulo d-flex justify-content-evenly"> <!--evenly: equitativamente, en mismas proporciones-->
+          <div class="row">
+            <div class="col-12 col-md-4 seccion-titulo">
+              ¡Hablemos!
+            </div>
+            <div class="col-12 col-md-4 descripcion">
+              Contáctame para iniciar tu proyecto de desarrollo web y haré que tu visión se vuelva realidad.
+            </div>
+            <div class="col-12 col-md-4">
+              <a href="mailto:hidalgo.eustaquio2019@gmail.com">
+                <button type="button">
+                  Contacto
+                  <i class="bi bi-envelope-check-fill"></i> <!--icono de bootstrap-->
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--pie de pagina (footer)-->
+
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+      <img class="footer-logo" src="images/icono-blanco.svg" alt="logo de portafolio">
+      <p class="footer-texto text-center">Aprendo y creo todos los días<br>Creemos un proyecto juntos</p>
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center"> <!--flex-wrap: para que se reajusten los iconos en diferentes dispositivos-->
+        <a href="https://web.facebook.com/profile.php?id=100007511776189" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-twitter"></i> <!--icono de bootstrap-->
+        </a>
+        <a href="https://github.com/Hidalgo-Eustaquio" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i> <!--icono de bootstrap-->
+        </a>
+        <a href="https://web.facebook.com/profile.php?id=100007511776189" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i> <!--icono de bootstrap-->
+        </a>
+        <a href="https://web.facebook.com/profile.php?id=100007511776189" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i> <!--icono de bootstrap-->
+        </a>
+        <a href="https://web.facebook.com/profile.php?id=100007511776189" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i> <!--icono de bootstrap-->
+        </a>
+        <a href="mailto:hidalgo.eustaquio2019@gmail.com" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-envelope-at-fill"></i> <!--icono de bootstrap-->
+        </a>
+      </div>
+      <div class="derechos-de-autor">Creado por Hidalgo Eustaquio (2022) &#169;</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

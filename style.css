@@ -1,0 +1,407 @@
+/*Barra de navegacion*/
+.navbar { /* .: para aplicar estilo a una clase */
+    padding: 2rem; /* 1rem = 1 font-size = 16px; rem: dimensión relativa al tamaño de la letra del elemento raiz (ese tamaño raiz se puede cambiar)*/
+    background-color: #f5f6f7;
+}
+.navbar-collapse {
+    align-items: center; /*Para centrar los elementos*/
+    justify-content: space-between; /*Para alinear menus a la derecha en pantallas grandes*/
+}
+
+/*Estilos generales*/
+section {
+    display: flex;
+    flex-direction: column; /*eje principal del contenedor*/
+    align-items: center; /*alinear elementos al centro*/
+    justify-content: center; /*justifica contenidos al centro*/
+}
+
+h1 {
+    font-size: 2.5rem; /*rem: dimensión relativa al tamaño de la letra del elemento raiz (ese tamaño raiz se puede cambiar)*/  
+    /*para personalizar tipo de letra: fonts.google.com, buscamos tipo de letra, click en +, copiamos y pegamos el link en head, compiamos a CSS palabras de la otra cajita*/
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.seccion-oscura {
+    color: white;
+    background-color: #1b1b32;
+}
+
+.seccion-clara {
+    color: black; /*color del texto*/
+    background-color: white;
+}
+
+.seccion-titulo {
+    font-size: 2rem;
+    padding: 15px 0; /*15px arriba y abajo, 0px en la izquierda y derecha*/
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.seccion-descripcion {
+    font-size: 1.2rem;
+    color: #584e4e;
+}
+
+.seccion-texto {
+    font-size: 1.2rem;
+}
+
+.texto-negro {
+    color: black;
+}
+
+.texto-blanco {
+    color: white;
+}
+
+.btn-info {
+    font-size: 1.1rem;
+    margin: 20px;
+    font-weight: bold; /*texto negrita*/
+}
+
+/*Seccion Hero*/
+.hero {
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
+}
+
+.hero-principal {
+    padding: 3rem; /*padding: espacio interior entre el límite de la caja del elemento y su contenido*/
+}
+.foto_perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /*para que sea redondo*/
+    margin: 20px;
+}
+.hero-principal h2 {
+    font-size: 1.5rem;
+    color: #615151;
+}
+
+/*sobre mí*/
+.sobre-mi {
+    height: 500px;
+    padding: 10px;
+}
+.sobre-mi .contenedor { /*para una clase dentro de otra clase*/
+    max-width: 600px;
+    text-align: center;
+}
+
+/*Experiencia*/
+
+.experiencia {
+    padding: 40px 40px 60px 40px; /*aplica en sentido de la agujas de reloj*/
+}
+
+.experiencia .columna {
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /*space-evenly: para distribuir equitativamente los elementos en funcion al eje principal "columna"*/
+    transition: all 0.2s ease-in; /*para aplicar efecto hover; 0.2 seg (tiempo)*/
+}
+
+.experiencia .columna:hover { /*cuando se pasa el cursor por ensima de ese div*/
+    color: white;
+    background-color: #1b1b32;
+}
+
+.experiencia i {
+    font-size: 2.5rem;
+    color: #7ade30;
+    background-color: #0a0a23;
+    padding: 8px 16px;
+    border-radius: 50%;
+
+}
+.experiencia-titulo {
+    font-size: 25px;
+    font-weight: bold; /*peso de la letra, bold:para que se vea negro intenso*/
+    margin: 10px 0;
+}
+
+.badges-contenedor {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badge {
+    margin: 5px;
+}
+
+/*Proyectos*/
+
+.proyectos-recientes {
+    padding: 40px;
+}
+
+.proyectos-recientes img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease-in;
+
+}
+
+.proyectos-contenedor {
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0; /*0: transparente, no se ve nada*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.overlay p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.proyecto {
+    position: relative; /*para que se vea el contenido o texto que está dentro*/
+}
+
+.proyecto:hover img { /*hover: cuando el cursos está encima*/
+    opacity: 0.2;
+}
+
+.proyecto:hover .overlay {
+    opacity: 1; /*1: opaco, para ver los elementos del contenido*/
+}
+
+.overlay .iconos-contenedor {
+    display: flex; /*flex (tambien se puede usar solo d-flex en html, es una clase de bootstrap): para que los iconos se muestren en una sola fila*/
+}
+
+.overlay i {
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
+/*articulos*/
+
+.articulos {
+    min-height: 500px;
+    padding: 30px;
+}
+
+.articulos .card {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.articulos .card-header {
+    font-weight: bold;
+}
+
+/*testimonios*/
+
+.testimonios {
+    padding: 40px 40px 80px 40px; /*en sentido de las agujas del reloj*/
+}
+
+.testimonios .carousel {
+    max-width: 800px;
+    background-color: rgb(121, 156, 209);
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonio-imagen {
+    height: 150px;
+    width: 150px;
+    margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto {
+    max-width: 70%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace; /*de google fonts*/
+}
+
+.testimonio-info {
+    font-weight: bold;
+    text-align: center;
+}
+
+.testimonio-info p {
+    margin-bottom: 0;
+}
+
+.testimonio-footer .cliente {
+    font-size: 1.2rem;
+}
+
+.testimonio-info .cargo {
+    font-size: 0.9rem;
+    color: #656060;
+}
+
+/*contacto*/
+
+.contacto .container {
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.contacto .rectangulo {
+    margin-top: -5rem;
+    background-color: rgb(13, 110,253);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white; /*ubicacion de lasombra (shadow) al rectangulo*/
+}
+
+.contacto .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contacto .descripcion {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contacto button {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2em;  /*em: tamaño relativo al tamaño de la letra del contenedor*/
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover {
+    background-color: white;
+    color: black;
+}
+
+.contacto button i {
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover i {
+    color: black;
+}
+
+/*pie de pagina (footer)*/
+
+footer {
+    min-height: 500px;
+}
+
+.footer-logo {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+.footer-texto {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in; /*deben ser iguales con el estilo anterior de .icono-redes-sociales*/
+}
+
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110,253);
+}
+
+.iconos-redes-sociales a:hover i {
+    color: black;
+}
+
+.derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+/*Adaptable - responsivo*/
+
+@media screen and (max-width: 400px) { /*Proyectos - responsivo*/
+    .overlay p { /*letras*/
+        font-size: 18px;
+    }
+    .overlay i { /*iconos*/
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) { /* media screen: pantalla multimedia*/
+    .navbar-brand {
+        display: none; /*none: ninguna; se aplica hasta maximo 767 px de ancho*/
+    }    
+}
+
+@media screen and (max-width: 800px) { /*testimonios*/
+    .testimonio-imagen {
+        height: 120px;
+        width: 120px;
+    }
+    .testimonio-texto {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 700px) { /*par que la img no ocupe todo el ancho en pantallas >= a 700px*/
+    .hero-inferior-imagen {
+        max-width: 600px;
+    }
+    
+}
